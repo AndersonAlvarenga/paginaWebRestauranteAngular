@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TrabalhoPratico"
+    }
+  },
+  "defaultProject": "TrabalhoPratico",
+  "cli": {
+    "analytics": "47e69538-9959-49e1-9279-98cf54c88f4f"
+  }
 }

@@ -1,0 +1,38 @@
+<html>
+<ul>
+    <li class="home">
+        <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Home</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem routerLink="/">Promoção</button>
+            </div>
+      </div>
+    </li>
+    <li class="produtos">
+        <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Produtos</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem routerLink="produtos">Listar Produtos</button>
+              <button ngbDropdownItem routerLink="cadastroProduto">Cadastrar Produto</button>
+              <button ngbDropdownItem routerLink="promocao">Produtos em Promoção</button>
+            </div>
+      </div>
+    </li>
+    <li class="mesas">
+        <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Mesas</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem routerLink="mesas">Listar mesas</button>
+            </div>
+      </div>
+    </li>
+    <li class="garcon">
+        <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Garçon</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem routerLink="garcon">Listar Garçon</button>
+              <button ngbDropdownItem routerLink="cadastroGarcon">Cadastrar Garçon</button>
+            </div>
+      </div>
+    </li>
+</ul>

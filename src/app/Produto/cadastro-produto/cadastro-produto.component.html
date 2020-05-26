@@ -1,0 +1,45 @@
+<form #formpost="ngForm" (ngSubmit)="onSubmit(formpost)" style="font-size: 13px;">
+    <div class="formulario">
+        <div class="form-group">
+            <label>Nome do Produto</label>
+            <input type="text" name="nome" [(ngModel)]="produtoForm.nome" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Descrição:</label>
+            <input type="text" name="descricao" [(ngModel)]="produtoForm.descricao" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Preço:</label>
+            <input type="number" name="preco" [(ngModel)]="produtoForm.preco" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Caminho da Imagem:</label>
+            <input type="text" name="imagem" [(ngModel)]="produtoForm.imagem" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Categoria:</label>
+            <select type="text" name="categoria_id" [(ngModel)]="produtoForm.categoria_id" class="form-control">
+                <option class="testCategory" value=""></option>
+                <option *ngFor='let categoria of categoria' value={{categoria.id}}>{{categoria.nome}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Produto em Promoção:</label>
+            <select type="text" id="teste" name="promocao" [(ngModel)]="produtoForm.promocao" (change)="enviarValor()"
+                class="form-control">
+                <option class="testPromo" value=""></option>
+                <option *ngFor='let promocao of promocao' value={{promocao.texto}}>{{promocao.texto}}</option>
+            </select>
+        </div>
+        <div class="form-group" *ngIf="resultPromo=='EM PROMOÇÃO'">
+            <label>Valor da promoção:</label>
+            <input type="text" name="valorPromo" [(ngModel)]="produtoForm.valorPromocao" class="form-control">
+        </div>
+        <div>
+            <button routerLink="produtos" class="btn btn-block btn-danger" (click)="onSubmit(formpost)"
+                routerLink="/produtos">Cadastrar</button>
+            <button class="btn btn-block btn-danger" (click)="cancelar()" routerLink="/produtos">Cancelar</button>
+        </div>
+        <hr>
+    </div>
+</form>
