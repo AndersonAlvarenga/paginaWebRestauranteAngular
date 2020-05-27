@@ -1,50 +1,54 @@
 <div class="album py-5 bg-light">
-  <div class="container" style="width: 55%;">
+  <div class="container">
     <div class="row">
       <div class="col-md-4" *ngFor='let produtos of listaProdutos'>
         <div class="card mb-4 box-shadow" style="padding: 3px;font-size: 12px;">
-          <div class="promocao" *ngIf="produtos.promocao=='EM PROMOÇÃO'">
-            <font>
-              <font style="vertical-align: inherit;">
-                Produto em promoção
+          <div style="height: 24px;">
+            <div class="promocao" *ngIf="produtos.promocao=='EM PROMOÇÃO'">
+              <font>
+                <font style="vertical-align: inherit;">
+                  Produto em promoção
+                </font>
               </font>
-            </font>
+            </div>
           </div>
-          <img class="card-img-top" data-src={{produtos.imagem}} alt="Miniatura [100% x225]" data-holder-rendered="true"
-            style="height: 170px; width: 100%; display: block;">
+          <div style="height: 130px;">
+            <img class="card-img-top" data-src={{produtos.imagem}} alt="Miniatura [100% x225]"
+              data-holder-rendered="true" style="height: 130px; width: 80%; display: block; margin: auto;">
+          </div>
           <div class="card-body">
-            <p class="card-text">
+            <p class="card-text" style="height: 25px;">
               <font style="vertical-align: inherit;">
                 <font style="vertical-align: inherit;">
                   {{produtos.nome}}
                 </font>
               </font>
             </p>
-            <p class="card-text">
+            <p class="card-text" style="height: 40px;">
               <font style="vertical-align: inherit;">
                 <font style="vertical-align: inherit;">
                   {{produtos.descricao}}
                 </font>
               </font>
             </p>
-            <p class="card-text">
+            <p class="card-text" style="height: 20px; margin: auto;">
               <font style="vertical-align: inherit;">
                 <font style="vertical-align: inherit;">
-                  {{produtos.preco}}
+                  Preço: {{produtos.preco}}
                 </font>
               </font>
             </p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <button type="button" class="btn btn-light">
-                  <font style="vertical-align: inherit;">
-                    <font style="vertical-align: inherit;" (click)="editar(produtos.id)" routerLink="/cadastroProduto">
+                  <font>
+                    <font (click)="editar(produtos.id)" routerLink="/cadastroProduto">
                       Editar</font>
                   </font>
                 </button>
                 <button type="button" class="btn btn-light" style="padding-right: 5px;">
-                  <font style="vertical-align: inherit;">
-                    <font style="vertical-align: inherit;" (click)="deletar(produtos.id)">Deletar</font>
+                  <font>
+                    <font (click)="deletar(produtos.id)">Deletar</font>
                   </font>
                 </button>
               </div>

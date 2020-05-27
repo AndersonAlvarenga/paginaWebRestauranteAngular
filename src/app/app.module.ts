@@ -13,6 +13,8 @@ import { CadastroProdutoComponent } from './Produto/cadastro-produto/cadastro-pr
 import { FormsModule } from '@angular/forms';
 import { PromocaoComponent } from './Produto/promocao/promocao.component';
 import { CadastroComponent } from './garcon/cadastro/cadastro.component';
+import { CategoriaComponent } from './Produto/categoria/categoria.component';
+import { CadastroCategoriaComponent } from './Produto/cadastro-categoria/cadastro-categoria.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CadastroComponent } from './garcon/cadastro/cadastro.component';
     GarconComponent,
     CadastroProdutoComponent,
     PromocaoComponent,
-    CadastroComponent
+    CadastroComponent,
+    CategoriaComponent,
+    CadastroCategoriaComponent
   ],
   imports: [
     BrowserModule,

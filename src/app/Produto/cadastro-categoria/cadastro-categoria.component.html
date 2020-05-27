@@ -1,0 +1,14 @@
+<form #formpost="ngForm" (ngSubmit)="onSubmit(formpost)">
+    <div class="formulario">
+        <div class="form-group">
+            <label>Nome da Categoria</label>
+            <input type="text" name="nome" [(ngModel)]="categoriaForm.nome" class="form-control">
+        </div>
+        <div>
+            <button class="btn btn-block btn-danger" (click)="onSubmit(formpost)"
+                routerLink="/categoria">Cadastrar</button>
+            <button class="btn btn-block btn-danger" (click)="cancelar()" routerLink="/categoria">Cancelar</button>
+        </div>
+        <hr>
+    </div>
+</form>

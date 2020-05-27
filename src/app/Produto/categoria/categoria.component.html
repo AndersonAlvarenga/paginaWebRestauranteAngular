@@ -1,0 +1,16 @@
+<table class="table">   
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome Categoria</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let categoria of listaCategoria">
+            <tr>
+                <th scope="row">{{categoria.id}}</th>
+                <td>{{categoria.nome}}</td>
+                <td><button type="button" class="btn btn-danger">Editar</button></td>
+                <td><button type="button" class="btn btn-danger"(click)="deletar(categoria.id)">Deletar</button></td>
+            </tr>
+        </tbody>    
+</table>

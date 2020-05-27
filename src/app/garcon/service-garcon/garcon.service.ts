@@ -22,4 +22,7 @@ export class GarconService {
   async delete(id: number) {
     return this.http.delete(this.link + "/" + id).toPromise();
   }
+  async editar(categoria) {
+    return this.http.put(this.link+"/"+categoria.id,categoria).toPromise();
+  }
 }
