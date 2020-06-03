@@ -6,7 +6,8 @@ import { Produtos } from '../interface/produtos';
   providedIn: 'root'
 })
 export class ProdutosServiceService {
-  private link = 'http://localhost:3000/produtos';
+  private link = 'http://192.168.0.105:8081/produtos';
+  
   constructor(private http: HttpClient) { }
   async carregarItem() {
     return await this.http.get(this.link).toPromise();

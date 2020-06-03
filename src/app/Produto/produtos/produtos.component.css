@@ -12,4 +12,11 @@ button{
     height: 30px;
     margin-top: auto;
 }
+.card-text{
+    overflow: hidden;
+}
+.card-img-top:hover{
+    border: solid 1px darkgray;
+    border-radius: 30px;
+}
   

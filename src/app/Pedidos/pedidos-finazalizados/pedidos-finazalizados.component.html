@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nº Pedido</th>
+            <th scope="col">Data</th>
+            <th scope="col">Nº Mesa</th>
+            <th scope="col">Garcon Responsável</th>
+            <th scope="col">Nome do Cliente</th>
+            <th scope="col">Produto</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let pedido of listaPedido">
+        <tr *ngIf="pedido.status =='PRONTO'">
+            <th scope="row">{{pedido.id}}</th> 
+            <td>{{pedido.date}}</td>        
+            <td>{{pedido.num_mesa}}</td>        
+            <td>{{pedido.nome_garcon}}</td>
+            <td>{{pedido.nome_cliente}}</td>
+            <td>{{pedido.produto}}</td>
+            <td>{{pedido.quantidade}}</td>
+            <td>{{pedido.status}}</td>
+
+            <td><button type="button" class="btn btn-danger" (click)="detalhar(pedido.id_produto)">Detalhe do Produto</button></td>
+        
+        </tr>
+    </tbody>
+</table>

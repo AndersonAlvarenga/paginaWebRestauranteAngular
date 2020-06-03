@@ -1,0 +1,36 @@
+<div class="comanda">
+    <div class="textComanda">
+        <p>COMANDA</p>
+    </div>
+
+    <img class="logo" src="{{imagem}}">
+    <div class="status">
+        {{comanda.status}}
+    </div>
+    <div class="text">
+        <p>Garcon responsável: {{garcon.nome}}</p>
+        <p>Número da Mesa: {{mesa.nome}}</p>
+        <p>Cliente: {{comanda.nome_cliente}}</p>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Produto</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Valor un.</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let produtoComanda of comanda.lista_produto">
+            <tr>
+                <th scope="row">{{produtoComanda.nome_produto}}</th>
+                <td>{{produtoComanda.quantidade}} un</td>
+                <td>R${{produtoComanda.preco}}</td>
+                <td>{{produtoComanda.valor_total}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="total">
+       Total: R${{comanda.valor_comanda}}
+    </div>
+</div>

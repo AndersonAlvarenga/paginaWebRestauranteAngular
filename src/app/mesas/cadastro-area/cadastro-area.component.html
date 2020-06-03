@@ -1,0 +1,14 @@
+<form #formpost="ngForm" (ngSubmit)="onSubmit(formpost)">
+    <div class="formulario">
+        <div class="form-group">
+            <label>Nome da Região</label>
+            <input type="text" name="nome" [(ngModel)]="areaForm.nome" class="form-control">
+        </div>
+        <div>
+            <button class="btn btn-block btn-danger" (click)="onSubmit(formpost)"
+                routerLink="/area">Cadastrar</button>
+            <button class="btn btn-block btn-danger" (click)="cancelar()" routerLink="/area">Cancelar</button>
+        </div>
+        <hr>
+    </div>
+</form>

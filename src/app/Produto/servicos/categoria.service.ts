@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CategoriaService {
-  link = "http://localhost:3000/categorias";
+  link = "http://192.168.0.105:8081/categorias";
   constructor(private http: HttpClient) { }
   async getCategoria() {
     return await this.http.get(this.link).toPromise();

@@ -34,6 +34,9 @@ export class ProdutosComponent implements OnInit {
   editar(id) {
   this.router.navigate(['editar',id]);
   }
+  detalhar(id){
+    this.router.navigate(['detalheProduto',id]);
+  }
   deletar(id: number) {
     console.log(this.listaProdutos);
     let aux = 0;

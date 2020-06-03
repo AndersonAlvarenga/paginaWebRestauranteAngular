@@ -1,0 +1,16 @@
+<table class="table">   
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Região</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let area of listaArea">
+        <tr>
+            <th scope="row">{{area.id}}</th>
+            <td>{{area.nome}}</td>
+            <td><button type="button" class="btn btn-danger"(click)="editar(area.id)">Editar</button></td>
+            <td><button type="button" class="btn btn-danger"(click)="deletar(area.id)">Deletar</button></td>
+        </tr>
+    </tbody>    
+</table>

@@ -1,0 +1,39 @@
+<form #formpost="ngForm" (ngSubmit)="onSubmit(formpost)">
+    <div class="formulario">
+        <div class="form-group">
+            <label>Número da Mesa</label>
+            <input type="text" name="nome" [(ngModel)]="mesaForm.nome" class="form-control">
+        </div>       
+        <div class="form-group">
+            <label>Região:</label>
+            <select type="text" name="id_regiao" [(ngModel)]="mesaForm.id_regiao" class="form-control">
+                <option class="regiao" value=""></option>
+                <option *ngFor='let regiao of listaArea' value={{regiao.id}}>{{regiao.nome}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Garçon Responsável:</label>
+            <select type="text" name="id_garcon" [(ngModel)]="mesaForm.id_garcon" class="form-control">
+                <option class="id_garcon" value=""></option>
+                <option *ngFor='let garcon of listaGarcon' value={{garcon.id}}>{{garcon.nome}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Status da Mesa:</label>
+            <select type="text" name="status" [(ngModel)]="mesaForm.status" class="form-control">
+                <option class="status" value=""></option>
+                <option class="status" value="DISPONIVEL">DISPONIVEL</option>
+                <option class="status" value="OCUPADA">OCUPADA</option>
+                
+            </select>
+        </div>
+
+        <div>
+            <button class="btn btn-block btn-danger" (click)="onSubmit(formpost)"
+                routerLink="/mesas">Cadastrar</button>
+            <button class="btn btn-block btn-danger" (click)="cancelar()" routerLink="/mesas">Cancelar</button>
+        </div>
+        <hr>
+    </div>
+</form>
