@@ -26,6 +26,7 @@ import { DetalheComandaComponent } from './comanda/detalhe-comanda/detalhe-coman
 import { ComandaFechadaComponent } from './comanda/comanda-fechada/comanda-fechada.component';
 import { PedidosPendentesComponent } from './Pedidos/pedidos-pendentes/pedidos-pendentes.component';
 import { PedidosFinazalizadosComponent } from './Pedidos/pedidos-finazalizados/pedidos-finazalizados.component';
+import { ComandaFechamentoComponent } from './comanda/comanda-fechamento/comanda-fechamento.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { PedidosFinazalizadosComponent } from './Pedidos/pedidos-finazalizados/p
     DetalheComandaComponent,
     ComandaFechadaComponent,
     PedidosPendentesComponent,
-    PedidosFinazalizadosComponent
+    PedidosFinazalizadosComponent,
+    ComandaFechamentoComponent
   ],
   imports: [
     BrowserModule,

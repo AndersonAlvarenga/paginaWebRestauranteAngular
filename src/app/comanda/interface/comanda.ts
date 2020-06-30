@@ -3,6 +3,7 @@ export interface Comanda{
           "date": Date,
           "id_mesa": number,
           "id_garcon": number,
+          "id_cliente":number,
           "nome_cliente": string,
           "lista_produto": [
             {

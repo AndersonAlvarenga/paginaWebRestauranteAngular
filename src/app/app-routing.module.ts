@@ -19,6 +19,7 @@ import { DetalheComandaComponent } from './comanda/detalhe-comanda/detalhe-coman
 import { ComandaFechadaComponent } from './comanda/comanda-fechada/comanda-fechada.component';
 import { PedidosPendentesComponent } from './Pedidos/pedidos-pendentes/pedidos-pendentes.component';
 import { PedidosFinazalizadosComponent } from './Pedidos/pedidos-finazalizados/pedidos-finazalizados.component';
+import { ComandaFechamentoComponent } from './comanda/comanda-fechamento/comanda-fechamento.component';
 
 
 const routes: Routes = [
@@ -45,7 +46,8 @@ const routes: Routes = [
   { path: 'detalheComanda/:id', component: DetalheComandaComponent },
   { path: 'comandaFechada', component: ComandaFechadaComponent },
   { path: 'pedidoPendente', component: PedidosPendentesComponent },
-  { path: 'pedidoFinalizado', component: PedidosFinazalizadosComponent }
+  { path: 'pedidoFinalizado', component: PedidosFinazalizadosComponent },
+  { path: 'comandaFechamento', component: ComandaFechamentoComponent }
 ];
 
 @NgModule({

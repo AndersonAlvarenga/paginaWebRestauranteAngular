@@ -1,62 +1,63 @@
 <html>
 <ul>
-    <li class="home">
-        <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Home</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button ngbDropdownItem routerLink="/">Promoção</button>
-            </div>
+  <li class="home">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Home</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem routerLink="/">Promoção</button>
       </div>
-    </li>
-    <li class="pedido">
-      <div ngbDropdown class="d-inline-block">
-          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Pedido</button>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button ngbDropdownItem routerLink="pedidoPendente">Pedidos Pendentes</button>
-            <button ngbDropdownItem routerLink="pedidoFinalizado">Pedidos Finalizados</button>
-          </div>
     </div>
   </li>
-    <li class="comanda">
-      <div ngbDropdown class="d-inline-block">
-          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Comandas</button>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button ngbDropdownItem routerLink="listarComandas">Listar Comandas</button>
-            <button ngbDropdownItem routerLink="comandaFechada">Listar Comandas Fechadas</button>
-            
-          </div>
+  <li class="pedido">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Pedido</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem routerLink="pedidoPendente">Pedidos Pendentes</button>
+        <button ngbDropdownItem routerLink="pedidoFinalizado">Pedidos Finalizados</button>
+      </div>
     </div>
   </li>
-    <li class="produtos">
-        <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Produtos</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button ngbDropdownItem routerLink="produtos">Listar Produtos</button>
-              <button ngbDropdownItem routerLink="cadastroProduto">Cadastrar Produto</button>
-              <button ngbDropdownItem routerLink="promocao">Produtos em Promoção</button>
-              <button ngbDropdownItem routerLink="categoria">Listar Categorias</button>
-              <button ngbDropdownItem routerLink="cadastroCategoria">Cadastrar Categorias</button>
-            </div>
+  <li class="comanda">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Comandas</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem routerLink="listarComandas">Listar Comandas</button>
+        <button ngbDropdownItem routerLink="comandaFechamento">Listar Comandas Aguardando Pagamento</button>
+        <button ngbDropdownItem routerLink="comandaFechada">Listar Comandas Fechadas</button>
+
       </div>
-    </li>
-    <li class="mesas">
-        <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Mesas</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button ngbDropdownItem routerLink="mesas">Listar Mesas</button>
-              <button ngbDropdownItem routerLink="cadastroMesa">Cadastrar Mesas</button>
-              <button ngbDropdownItem routerLink="area">Listar Areas do Estabelecimento</button>
-              <button ngbDropdownItem routerLink="cadastroArea">Cadastrar Area</button>
-            </div>
+    </div>
+  </li>
+  <li class="produtos">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Produtos</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem routerLink="produtos">Listar Produtos</button>
+        <button ngbDropdownItem routerLink="cadastroProduto">Cadastrar Produto</button>
+        <button ngbDropdownItem routerLink="promocao">Produtos em Promoção</button>
+        <button ngbDropdownItem routerLink="categoria">Listar Categorias</button>
+        <button ngbDropdownItem routerLink="cadastroCategoria">Cadastrar Categorias</button>
       </div>
-    </li>
-    <li class="garcon">
-        <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Garçon</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button ngbDropdownItem routerLink="garcon">Listar Garçon</button>
-              <button ngbDropdownItem routerLink="cadastroGarcon">Cadastrar Garçon</button>
-            </div>
+    </div>
+  </li>
+  <li class="mesas">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Mesas</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem routerLink="mesas">Listar Mesas</button>
+        <button ngbDropdownItem routerLink="cadastroMesa">Cadastrar Mesas</button>
+        <button ngbDropdownItem routerLink="area">Listar Areas do Estabelecimento</button>
+        <button ngbDropdownItem routerLink="cadastroArea">Cadastrar Area</button>
       </div>
-    </li>
+    </div>
+  </li>
+  <li class="garcon">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Garçon</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem routerLink="garcon">Listar Garçon</button>
+        <button ngbDropdownItem routerLink="cadastroGarcon">Cadastrar Garçon</button>
+      </div>
+    </div>
+  </li>
 </ul>

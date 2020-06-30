@@ -1,0 +1,32 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nº Comanda</th>
+            <th scope="col">Garcon Responsável</th>
+            <th scope="col">Nome do Cliente</th>
+            <th scope="col">Nº Mesa</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let comanda of listaComanda">
+        <tr *ngIf="comanda.status=='AGUARDANDO PAGAMENTO'">
+            <th scope="row">{{comanda.id}}</th>
+            <a *ngFor="let garcon of listaGarcon">
+                <td *ngIf="comanda.id_garcon==garcon.id">
+                    {{garcon.nome}}
+                </td>
+            </a>
+            <td>{{comanda.nome_cliente}}</td>
+            <a *ngFor="let mesa of listaMesa">
+                <td *ngIf="comanda.id_mesa==mesa.id">
+                    {{mesa.nome}}
+                </td>
+            </a>
+            <td>{{comanda.valor_comanda}}</td>
+            <td>{{comanda.status}}</td>
+            <td><button type="button" class="btn btn-danger" (click)="detalhe(comanda.id)">Detalhe</button></td>
+            <td><button type="button" class="btn btn-danger" (click)="pagamentoRecebido(comanda.id)">Pagamento Recebido</button></td>
+        </tr>
+    </tbody>
+</table>

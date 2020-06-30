@@ -22,16 +22,27 @@ export class ComandaComponent implements OnInit {
     private garconService: GarconService,
     private mesaService: MesaService,
     private route: Router,
-    
+
   ) { }
 
   async ngOnInit() {
+    
     this.listaAux = await this.comandaService.get();
     this.listaComanda = this.listaAux;
     this.listaAux = await this.garconService.getGarcon();
     this.listaGarcon = this.listaAux;
     this.listaAux = await this.mesaService.getMesa();
     this.listaMesa = this.listaAux;
+    this.carregaDados();
+    console.log(this.listaComanda)
+    console.log(this.listaMesa)
+  }
+  carregaDados(){
+    let result = setTimeout(async carregaDado=>{
+      this.listaAux = await this.comandaService.get();
+      this.listaComanda = this.listaAux;
+    },10000);
+    
   }
   detalhe(id) {
     this.route.navigate(['detalheComanda', id]);

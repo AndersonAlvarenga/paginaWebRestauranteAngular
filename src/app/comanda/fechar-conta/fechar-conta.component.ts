@@ -39,7 +39,7 @@ export class FecharContaComponent implements OnInit {
   
     this.aux = await this.comandaService.getById(this.id)
     this.comanda = this.aux;
-    this.comanda.status="FECHADA";
+    this.comanda.status="AGUARDANDO PAGAMENTO";
     this.comandaService.put(this.comanda);
     this.aux = await this.garconService.getGarconById(this.comanda.id_garcon);
     this.garcon = this.aux;
